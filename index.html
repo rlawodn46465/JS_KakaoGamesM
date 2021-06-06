@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- <section id="section1">
+      <div class="slide">
+        <ul id="slide_img">
+          <li><a href="#"><img src="images/slide1.png" alt="slide_img1"></a></li>
+          <li><a href="#"><img src="images/slide2.png" alt="slide_img2"></a></li>
+          <li><a href="#"><img src="images/slide3.png" alt="slide_img3"></a></li>
+          <li><a href="#"><img src="images/slide4.png" alt="slide_img4"></a></li>
+        </ul>
+        <div class="slide_btn">
+          <span class="btn_left" onclick="moveSlides(-1)"></span>
+          <span class="btn_right" onclick="moveSlides(1)"></span>
+        </div>
+      </div>
+      <div class="notice">
+        <h2>새소식 / 공지사항</h2>
+        <div class="notice_list">
+          <p><카카오게임즈 개인정보처리방침>이 2018년 05월 24일자로 변경 됩니다.</p>
+        </div>
+      </div>
+    </section> -->
+  <section id="section2">
+    <div class="inner">
+      <div class="sec_title">
+        <h3>KaKaogames</h3>
+        <p>
+          게임이 일상이 되는 세상!<br>
+          누구나 쉽고 재미있게 즐길 수 있는 게임, 모두 다 함께 즐길 수 있는 게임.<br>
+          게임으로 하나되는 세상을 꿈꿉니다.
+        </p>
+      </div>
+      <nav>
+        <div class="box1">
+          <h3>카카오게임즈 게임</h3>
+          <p>
+            카카오톡의 소셜 파워 기반,<br>
+            캐주얼 게임부터 MMORPG까지 다체로운 장르의<br>
+            모바일 게임을 카카오톡 친구들과 함께 즐길 수 있습니다.
+          </p>
+          <img src="images/ODIN_Thor.png" alt="odin">
+          <div>
+            <p>바로가기</p>
+            <div class="arr_box">
+              <span class="arr_1"></span>
+              <span class="arr_2"></span>
+              <span class="arr_3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <h3>주가정보</h3>
+          <h3>52,300</h3>
+          <div>
+            <p>전일대비</p>
+            <div class="tri"></div>
+            <p class="won">200</p>
+          </div>
+        </div>
+        <div class="box3">
+          <h3>비즈니스</h3>
+          <p>
+            카카오게임즈는 다양한<br>
+            모바일 비즈니스를 하고 있습니다.
+          </p>
+          <div>
+            <p>바로가기</p>
+            <div class="arr_box">
+              <span class="arr_1"></span>
+              <span class="arr_2"></span>
+              <span class="arr_3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="box4">
+          <h3>채용안내</h3>
+          <p>
+            함께 만들어갈<br>
+            더 즐거운 세상을 꿈꿉니다.
+          </p>
+          <img src="images/lion_pubg.png" alt="lion">
+          <div>
+            <p>바로가기</p>
+            <div class="arr_box">
+              <span class="arr_1"></span>
+              <span class="arr_2"></span>
+              <span class="arr_3"></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="inner">
+      <h2>전체 게임</h2>
+      <div id="tag_box">
+        <label for="tag1" class="backcolor">
+          <input type="checkbox" onclick="selectAll(this), clicked(this)" name="tag_all" id="tag1" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>전체</p>
+        </label>
+        <label for="tag2" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag2" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>시뮬레이션</p>
+        </label>
+        <label for="tag3" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag3" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>롤플레잉</p>
+        </label>
+        <label for="tag4" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag4" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>보드</p>
+        </label>
+        <label for="tag5" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag5" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>스포츠</p>
+        </label>
+        <label for="tag6" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag6" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>퍼즐</p>
+        </label>
+        <label for="tag7" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag7" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>달리기</p>
+        </label>
+        <label for="tag8" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag8" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>액션</p>
+        </label>
+        <label for="tag9" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag9" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>슈팅</p>
+        </label>
+        <label for="tag10" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag10" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>전략</p>
+        </label>
+        <label for="tag11" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag11" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>음악</p>
+        </label>
+        <label for="tag12" class="backcolor">
+          <input type="checkbox" onclick="clicked(this)" name="tag_box" id="tag12" checked>
+          <img src="images/tag.png" alt="tag">
+          <p>퀴즈</p>
+        </label>
+      </div>
+      <ul id="game_box">
+        <li class="simulation">
+          <img src="images/game_1.png" alt="">
+          <h4>니모의 오션라이프</h4>
+          <p>니모를 찾아서의 감동이 모바일로 풍덩!</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>시뮬레이션</p>
+          </div>
+        </li>
+        <li class="role-playing">
+          <img src="images/game_2.png" alt="">
+          <h4>바람의나라: 연</h4>
+          <p>넥슨은 다람쥐를 뿌려라! 바~람↗의-나↘라~바람의→나라 모바일로 등장!</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>롤플레잉</p>
+          </div>
+        </li>
+        <li class="role-playing">
+          <img src="images/game_3.png" alt="">
+          <h4>메이플스토리M</h4>
+          <p>메이플스토리M </p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>롤플레잉</p>
+          </div>
+        </li>
+        <li class="simulation">
+          <img src="images/game_4.png" alt="">
+          <h4>앨리스클로젯</h4>
+          <p>♣당신이 사랑할, 앨리스클로젯♣</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>시뮬레이션</p>
+          </div>
+        </li>
+        <li class="role-playing">
+          <img src="images/game_5.png" alt="">
+          <h4>그랑사가</h4>
+          <p>위대한 전설의 시작! 그랑사가</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>롤플레잉 </p>
+          </div>
+        </li>
+        <li class="run">
+          <img src="images/game_6.png" alt="">
+          <h4>프렌즈레이싱 듀오</h4>
+          <p>"어쩌면" 세계 최초 듀오 태그 레이싱게임 프렌즈레이싱 듀오!</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>달리기</p>
+          </div>
+        </li>
+        <li class="puzzle">
+          <img src="images/game_7.png" alt="">
+          <h4>Hello BT21</h4>
+          <p>리얼퍼즐쾌감! 우주스타의 액션퍼즐게임</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>퍼즐</p>
+          </div>
+        </li>
+        <li class="role-playing">
+          <img src="images/game_8.png" alt="">
+          <h4>엘더스크롤: 블레이드</h4>
+          <p>오리지널 엘더스크롤 시리즈의 신작</p>
+          <div>
+            <img src="images/tag.png" alt="tag">
+            <p>롤플레잉</p> 
+          </div>
+        </li>
+      </ul>
+      <div id="more_box" onclick="moreOpen()">더보기</div>
+    </div>
+  </section>
+  <section id="section4"></section>
+  <footer></footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
