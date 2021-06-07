@@ -192,3 +192,48 @@ function moreOpen() {
   moreBox.style.display = "none";
   console.log("클릭!");
 }
+
+/* tab box */
+const tab = document.querySelectorAll(".tabs_box h3")
+const tabLine = document.querySelectorAll(".tabs_box h3 .line")
+const tab1 = document.getElementById("tab1");
+const tab2 = document.getElementById("tab2");
+const tab3 = document.getElementById("tab3");
+
+
+
+tab[0].addEventListener('click', function(){
+  tab1.style.display = "block";
+  tab2.style.display = "none";
+  tab3.style.display = "none";
+  tabLine[0].style.width = "100%"
+  tabLine[0].style.left = "0"
+  tabLine[1].style.width = "0"
+  tabLine[1].style.left = "50%"
+  tabLine[2].style.width = "0"
+  tabLine[2].style.left = "50%"
+});
+
+tab[1].addEventListener('click', function(){
+  tab2.style.display = "block"
+  tab1.style.display = "none";
+  tab3.style.display = "none";
+  tabLine[1].style.width = "100%"
+  tabLine[1].style.left = "0"
+  tabLine[0].style.width = "0"
+  tabLine[0].style.left = "50%"
+  tabLine[2].style.width = "0"
+  tabLine[2].style.left = "50%"
+});
+
+tab[2].addEventListener('click', function(){
+  tab3.style.display = "block"
+  tab1.style.display = "none";
+  tab2.style.display = "none";
+  tabLine[2].style.width = "100%"
+  tabLine[2].style.left = "0"
+  tabLine[0].style.width = "0"
+  tabLine[0].style.left = "50%"
+  tabLine[1].style.width = "0"
+  tabLine[1].style.left = "50%"
+});

@@ -279,6 +279,7 @@
 
 #section3 #more_box:hover{
   background-color: #FFE730;
+  cursor: pointer;
 }
 
 #section3 #tag_box>label.backcolor{
@@ -287,6 +288,128 @@
   position: relative;
   right: 2px;
   bottom: 2px;
+}
+
+#section4{
+  text-align: center;
+}
+
+#section4 h2{
+  margin: 100px 0 20px;
+  text-align: center;
+  font-size: 80px;
+}
+
+#section4 .tabs_box{
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+#section4 .tabs_box h3{
+  margin-right: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+#section4 .tabs_box h3 .line{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ffb000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#section4 .tabs_box h3:first-child .line{
+  width: 100%;
+  left: 0;
+}
+
+
+#section4 .tab{
+  display: none;
+}
+
+#section4 #tab1{
+  display: block;
+}
+
+#section4 .tab h4{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#section4 .tab>p{
+  font-size: 25px;
+}
+
+#section4 .tab ul{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+#section4 .tab ul li{
+  margin: 0 30px;
+}
+
+#section4 .tab ul li img{
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+#section4 .tab ul li p{
+  font-size: 20px;
+}
+
+#section4 .tab .tab_box h5{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#section4 .tab .tab_box p{
+  font-size: 15px;
+}
+
+#section4 .tab .tab_box .tab_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 52px;
+  font-size: 24px;
+  margin: 30px auto;
+  border: 1px solid;
+}
+
+#section4 .tab .tab_box .tab_btn:hover{
+  background-color: #FFE730;
+}
+
+#section5{
+  text-align: center;
+}
+
+#section5 h2{
+  margin: 100px 0 20px;
+  text-align: center;
+  font-size: 80px;
+}
+
+#section5 iframe{
+  width: 560px;
+  height: 315px;
+}
+
+#section5 h3{
+  font-size: 30px;
+  margin: 20px 0;
 }
 
 @media (min-width:1025px) {
