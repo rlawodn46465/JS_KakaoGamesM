@@ -32,6 +32,10 @@ function showSlides(n){
   slides.style.left = -slide_width * n + 'px';
 }
 
+/* 공지사항 */
+
+
+
 /*게임*/
 function clicked(tag) { //개별 클릭시
   const checkboxs = document.querySelectorAll('input[name="tag_box"]');

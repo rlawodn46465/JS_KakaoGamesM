@@ -1,11 +1,56 @@
-/* #section1 {
+@font-face {
+  font-family: 'kakao-Regular';
+  src: url('../fonts/KakaoRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'kakao-Bold';
+  src: url('../fonts/KakaoBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: url('../fonts/NotoSansKR-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSans-Light';
+  src: url('../fonts/NotoSansKR-Light.otf') format('truetype');
+}
+
+body{
+  font-family: 'kakao-Regular';
+}
+
+#section1 {
   width: 100%;
+  height: 900px;
+  overflow: hidden;
   position: relative;
 }
 
 #section1 .slide {
   width: 100%;
+  max-width: 1300px;
   height: 600px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+#section1 .slide #slide_img {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  transition: 1s;
+}
+
+#section1 .slide .slide_btn {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: 1000;
 }
 
 #section1 .slide .slide_btn .btn_left {
@@ -37,8 +82,19 @@
 
 #section1 .notice {
   margin: 100px 0px;
+  font-size: 40px;
   display: flex;
-} */
+  align-items: center;
+}
+
+#section1 .notice .notice_list{
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+#section1 .notice .notice_list p{
+  margin-bottom: 36px;
+}
 
 #section2 .sec_title {
   text-align: center;
@@ -55,6 +111,11 @@
 
 #section2 nav {
   margin-top: 100px;
+  font-family: 'NotoSans-Bold';
+}
+
+#section2 nav div p{
+  font-family: 'NotoSans-Light';
 }
 
 #section2 nav .box1 {
@@ -389,6 +450,7 @@
 
 #section5{
   text-align: center;
+  margin-bottom: 100px;
 }
 
 #section5 h2{
@@ -462,6 +524,7 @@ background-color: #FFE730;
 
 #section5 .welfare_box ul li .front p{
   font-size: 12px;
+  font-weight: 900;
 }
 
 #section5 .welfare_box ul li .back{
@@ -471,11 +534,67 @@ background-color: #FFE730;
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size: 10px;
+  font-size: 11px;
   background-color: #FFE730;
   border-radius: 50%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+}
+
+#section5 .welfare_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 52px;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 auto;
+  border: 1px solid;
+}
+
+#section5 .welfare_btn:hover{
+  background-color: #FFE730;
+  cursor: pointer;
+}
+
+footer{
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+footer .left{
+  margin-right: 100px;
+  height: 157px;
+  float: left;
+  font-size: 24px;
+}
+
+footer .left span{
+  font-family: 'kakao-Bold';
+}
+
+footer .right{
+  display: inline-block;
+}
+
+footer .right .footer_1{
+  display: flex;
+}
+
+footer .right .footer_2{
+  display: flex;
+  margin-top: 20px;
+}
+
+footer .right .footer_3{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+footer .right div>span{
+  margin: 0 20px;
 }
 
 @media (min-width:1025px) {
@@ -483,38 +602,6 @@ background-color: #FFE730;
     max-width: 1300px;
     margin: 0 auto;
   }
-
-  /* #section1 {
-    height: 900px;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-  }
-
-  #section1 .slide {
-    max-width: 1920px;
-    height: 600px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-  }
-
-  #section1 .slide #slide_img {
-    display: flex;
-    position: relative;
-    left: 0;
-    transition: 1s;
-  }
-
-  #section1 .slide .slide_btn {
-    width: 100vw;
-    height: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -604px;
-  } */
 
   #section2 nav {
     display: flex;
@@ -539,11 +626,6 @@ background-color: #FFE730;
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  /* #section2 nav>div{
-    width: 500px;
-    height: 300px;
-  } */
 }
 
 @media (max-width:720px) {
@@ -551,33 +633,4 @@ background-color: #FFE730;
     max-width: 650px;
     margin: 0 auto;
   }
-
-  /* #section1 .slide {
-    position: absolute;
-    overflow: hidden;
-  }
-
-  #section1 .slide #slide_img {
-    display: flex;
-    position: relative;
-    left: 0;
-    transition: 1s;
-  }
-
-  #section1 .slide #slide_img li {
-    width: 100vw;
-    height: 100vw;
-    box-sizing: border-box;
-    padding: 60px;
-    border: 1px solid black;
-  }
-
-  #section1 .slide #slide_img li a {
-    display: block;
-    width: 530px;
-    height: 530px;
-    border-radius: 10vw;
-    overflow: hidden;
-    background-color: blue;
-  } */
 }
