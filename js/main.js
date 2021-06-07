@@ -1,36 +1,36 @@
 /*슬라이드*/
 
-// var slideIndex = 0;
-// var slide = document.getElementById("slide_img");
+var slideIndex = 0;
+var slide = document.getElementById("slide_img");
 
-// window.onload = function(){
-// var sec = 4000;
+window.onload = function(){
+var sec = 4000;
 
-// setInterval(function(){
-//   slideIndex++;
-//   showSlides(slideIndex);
-// }, sec);
-// }
+setInterval(function(){
+  slideIndex++;
+  showSlides(slideIndex);
+}, sec);
+}
 
-// function moveSlides(n){
-//   slideIndex = slideIndex + n
-//   showSlides(slideIndex);
-// }
+function moveSlides(n){
+  slideIndex = slideIndex + n
+  showSlides(slideIndex);
+}
 
-// function showSlides(n){
-//   var slides = document.getElementById("slide_img");
-//   var size = slides.childElementCount;
-//   var slide_width = slides.firstElementChild.offsetWidth;
+function showSlides(n){
+  var slides = document.getElementById("slide_img");
+  var size = slides.childElementCount;
+  var slide_width = slides.firstElementChild.offsetWidth;
 
-//   if((n + 1) > size){
-//     slideIndex = 0;
-//     n = 0;
-//   } else if(n < 0){
-//     slideIndex = (size - 1);
-//     n = (size - 1);
-//   }
-//   slides.style.left = -slide_width * n + 'px';
-// }
+  if((n + 1) > size){
+    slideIndex = 0;
+    n = 0;
+  } else if(n < 0){
+    slideIndex = (size - 1);
+    n = (size - 1);
+  }
+  slides.style.left = -slide_width * n + 'px';
+}
 
 /*게임*/
 function clicked(tag) { //개별 클릭시
