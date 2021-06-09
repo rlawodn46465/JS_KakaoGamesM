@@ -14,15 +14,21 @@
   <section id="section1">
     <div class="inner">
       <div class="slide">
-        <ul id="slide_img">
-          <li><a href="#"><img src="images/slide1.png" alt="slide_img1"></a></li>
-          <li><a href="#"><img src="images/slide2.png" alt="slide_img2"></a></li>
-          <li><a href="#"><img src="images/slide3.png" alt="slide_img3"></a></li>
-          <li><a href="#"><img src="images/slide4.png" alt="slide_img4"></a></li>
+        <ul class="w_slide" id="slide_img">
+          <li class="hide"><a href="#"><img src="images/slide1.png" alt="slide_img1"></a></li>
+          <li class="hide"><a href="#"><img src="images/slide2.png" alt="slide_img2"></a></li>
+          <li class="hide"><a href="#"><img src="images/slide3.png" alt="slide_img3"></a></li>
+          <li class="hide"><a href="#"><img src="images/slide4.png" alt="slide_img4"></a></li>
+       </ul>
+        <ul class="m_slide" id="slide_img2">
+          <li class="m_hide"><a href="#"><img src="images/slide1_m.png" alt="slide_img4"></a></li>
+          <li class="m_hide"><a href="#"><img src="images/slide2_m.png" alt="slide_img4"></a></li>
+          <li class="m_hide"><a href="#"><img src="images/slide3_m.png" alt="slide_img4"></a></li>
+          <li class="m_hide"><a href="#"><img src="images/slide4_m.png" alt="slide_img4"></a></li>
         </ul>
         <div class="slide_btn">
-          <span class="btn_left" onclick="moveSlides(-1)"></span>
-          <span class="btn_right" onclick="moveSlides(1)"></span>
+          <span class="btn_left" onclick="moveSlides(-1); moveSlides2(-1);"></span>
+          <span class="btn_right" onclick="moveSlides(1); moveSlides2(1);"></span>
         </div>
       </div>
       <div class="notice">
@@ -790,15 +796,7 @@
           </a>
           <span>|</span>
           <a href="#">
-            <p>사이버 윤리 신고센터</p>
-          </a>
-          <span>|</span>
-          <a href="#">
             <p>오시는길</p>
-          </a>
-          <span>|</span>
-          <a href="#">
-            <p>공지사항</p>
           </a>
         </div>
         <div class="footer_2">

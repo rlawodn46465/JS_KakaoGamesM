@@ -3,14 +3,12 @@
 var slideIndex = 0;
 var slide = document.getElementById("slide_img");
 
-window.onload = function () {
-  var sec = 4000;
+var sec = 4000;
 
-  setInterval(function () {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, sec);
-}
+setInterval(function () {
+  slideIndex++;
+  showSlides(slideIndex);
+}, sec);
 
 function moveSlides(n) {
   slideIndex = slideIndex + n
@@ -30,6 +28,38 @@ function showSlides(n) {
     n = (size - 1);
   }
   slides.style.left = -slide_width * n + 'px';
+}
+
+/* 모바일 */
+var slideIndex2 = 0;
+var slide2 = document.getElementById("slide_img2");
+var sec2 = 3000;
+
+setInterval(function () {
+  slideIndex2++;
+  showSlides2(slideIndex2);
+}, sec2);
+
+function moveSlides2(n) {
+  slideIndex2 = slideIndex2 + n
+  showSlides2(slideIndex2);
+}
+
+function showSlides2(n) {
+  var slides2 = document.getElementById("slide_img2");
+  var size2 = slides2.childElementCount;
+  var slide_width2 = slides2.firstElementChild.offsetWidth;
+
+  console.log(slide_width2);
+
+  if ((n + 1) > size2) {
+    slideIndex2 = 0;
+    n = 0;
+  } else if (n < 0) {
+    slideIndex2 = (size2 - 1);
+    n = (size2 - 1);
+  }
+  slides2.style.left = -slide_width2 * n + 'px';
 }
 
 /* 공지사항 */
