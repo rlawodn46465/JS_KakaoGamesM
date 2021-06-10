@@ -8,10 +8,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.4.js"></script>
 </head>
 
 <body>
   <section id="section1">
+    <div class="slide_btn">
+      <span class="btn_left" onclick="moveSlides(-1); moveSlides2(-1);"></span>
+      <span class="btn_right" onclick="moveSlides(1); moveSlides2(1);"></span>
+    </div>
     <div class="inner">
       <div class="slide">
         <ul class="w_slide" id="slide_img">
@@ -19,17 +24,14 @@
           <li class="hide"><a href="#"><img src="images/slide2.png" alt="slide_img2"></a></li>
           <li class="hide"><a href="#"><img src="images/slide3.png" alt="slide_img3"></a></li>
           <li class="hide"><a href="#"><img src="images/slide4.png" alt="slide_img4"></a></li>
-       </ul>
+        </ul>
         <ul class="m_slide" id="slide_img2">
           <li class="m_hide"><a href="#"><img src="images/slide1_m.png" alt="slide_img4"></a></li>
           <li class="m_hide"><a href="#"><img src="images/slide2_m.png" alt="slide_img4"></a></li>
           <li class="m_hide"><a href="#"><img src="images/slide3_m.png" alt="slide_img4"></a></li>
           <li class="m_hide"><a href="#"><img src="images/slide4_m.png" alt="slide_img4"></a></li>
         </ul>
-        <div class="slide_btn">
-          <span class="btn_left" onclick="moveSlides(-1); moveSlides2(-1);"></span>
-          <span class="btn_right" onclick="moveSlides(1); moveSlides2(1);"></span>
-        </div>
+
       </div>
       <div class="notice">
         <h2>새소식 / 공지사항</h2>
@@ -42,6 +44,7 @@
         </div>
       </div>
     </div>
+
   </section>
   <section id="section2">
     <div class="inner">
@@ -63,7 +66,7 @@
           </p>
           <img src="images/ODIN_Thor.png" alt="odin">
           <div>
-            <a href="#">
+            <a href="#section3">
               <p>바로가기</p>
               <div class="arr_box">
                 <span class="arr_1"></span>
@@ -89,7 +92,7 @@
             모바일 비즈니스를 하고 있습니다.
           </p>
           <div>
-            <a href="#">
+            <a href="#section4">
               <p>바로가기</p>
               <div class="arr_box">
                 <span class="arr_1"></span>
@@ -107,7 +110,7 @@
           </p>
           <img src="images/lion_pubg.png" alt="lion">
           <div>
-            <a href="#">
+            <a href="#section5">
               <p>바로가기</p>
               <div class="arr_box">
                 <span class="arr_1"></span>
@@ -186,7 +189,8 @@
         </label>
       </div>
       <ul id="game_box"></ul>
-      <div id="more_box" onclick="moreOpen()">더보기</div>
+      <div id="more_box" class="onbox" onclick="moreOpen()">더보기</div>
+      <div id="more_box" class="offbox" onclick="moreOpen2()">숨기기</div>
     </div>
   </section>
   <section id="section4">
@@ -815,6 +819,7 @@
   </footer>
   <script src="js/list.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jquery.js"></script>
 </body>
 
 </html>

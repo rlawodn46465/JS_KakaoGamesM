@@ -50,8 +50,6 @@ function showSlides2(n) {
   var size2 = slides2.childElementCount;
   var slide_width2 = slides2.firstElementChild.offsetWidth;
 
-  console.log(slide_width2);
-
   if ((n + 1) > size2) {
     slideIndex2 = 0;
     n = 0;
@@ -296,12 +294,28 @@ function selectAll(selectAll) { //전체 클릭시
   }
 }
 
+
 function moreOpen() {
-  const moreBox = document.getElementById("more_box");
+  const moreBox = document.querySelector('#section3 .onbox');
+  const moreBox2 = document.querySelector('#section3 .offbox');
   const gameBox = document.querySelector("#game_box");
-  gameBox.style.height = "auto";
+  gameBox.style.height = 'auto';
   moreBox.style.display = "none";
+  moreBox2.style.display = "flex";
 }
+
+function moreOpen2() {
+  const moreBox = document.querySelector('#section3 .onbox');
+  const moreBox2 = document.querySelector('#section3 .offbox');
+  const gameBox = document.querySelector("#game_box");
+  const gmaeBoxHeight = document.querySelector("#game_box li").offsetHeight;
+  const addHeight = gmaeBoxHeight * 2;
+  gameBox.style.height = addHeight + 'px';
+  moreBox.style.display = "flex";
+  moreBox2.style.display = "none";
+}
+
+
 
 /* tab box */
 const tab = document.querySelectorAll(".tabs_box h3")

@@ -35,6 +35,7 @@ body {
   width: 100%;
   max-width: 1300px;
   position: relative;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -47,17 +48,20 @@ body {
   transition: 1s;
 }
 
-#section1 .slide #slide_img li a img{
+#section1 .slide #slide_img li a img {
   width: 100%;
-} 
+}
 
-#section1 .slide .slide_btn {
+#section1 .slide_btn {
   width: 100%;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 53px;
   z-index: 1000;
 }
 
-#section1 .slide .slide_btn .btn_left {
+#section1 .slide_btn .btn_left {
   display: inline-block;
   width: 100px;
   height: 100%;
@@ -68,7 +72,7 @@ body {
   opacity: 0;
 }
 
-#section1 .slide .slide_btn .btn_right {
+#section1 .slide_btn .btn_right {
   display: inline-block;
   width: 100px;
   height: 100%;
@@ -79,8 +83,8 @@ body {
   opacity: 0;
 }
 
-#section1 .slide .slide_btn .btn_left:hover,
-#section1 .slide .slide_btn .btn_right:hover {
+#section1 .slide_btn .btn_left:hover,
+#section1 .slide_btn .btn_right:hover {
   opacity: 1;
 }
 
@@ -153,7 +157,7 @@ body {
 #section2 nav {
   padding-top: 100px;
   font-family: 'NotoSans-Bold';
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #section2 nav div p {
@@ -322,10 +326,11 @@ body {
   height: 820px;
   overflow: hidden;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 #section3 #game_box li {
+  display: block;
   width: 300px;
   height: 410px;
   position: relative;
@@ -348,7 +353,8 @@ body {
   margin-left: 5px;
 }
 
-#section3 #more_box {
+#section3 .onbox,
+#section3 .offbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,6 +363,10 @@ body {
   font-size: 24px;
   margin: 0 auto;
   border: 1px solid;
+}
+
+#section3 .offbox{
+  display: none;
 }
 
 #section3 #tag_box>label:hover {
@@ -378,6 +388,10 @@ body {
   position: relative;
   right: 2px;
   bottom: 2px;
+}
+
+#section3 #tag_box>label.backcolor:hover {
+  background-color: #dac527;
 }
 
 #section4 {
@@ -407,7 +421,7 @@ body {
 
 #section4 .tabs_box h3 .line {
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
+  bottom: -5px;
   content: "";
   display: block;
   height: 2px;
@@ -629,27 +643,33 @@ footer .right div>span {
     margin: 0 auto;
   }
 
-  #section1 .slide #slide_img li{
+  #section1 .slide {
     width: 1300px;
-  }
-
-  #section1 .slide .m_slide{
-    display: none;
-  }
-
-  #section1 .slide .slide_btn {
     height: 600px;
   }
 
-  #section1 .notice h2{
+  #section1 .slide #slide_img li {
+    width: 1300px;
+  }
+
+  #section1 .slide .m_slide {
+    display: none;
+  }
+
+  #section1 .slide_btn {
+    max-width: 1300px;
+    height: 600px;
+  }
+
+  #section1 .notice h2 {
     font-size: 41px;
   }
 
-  #section1 .notice .rolling_box{
+  #section1 .notice .rolling_box {
     width: 700px;
   }
 
-  .rolling_box ul li a{
+  .rolling_box ul li a {
     font-size: 25px;
   }
 
@@ -657,7 +677,7 @@ footer .right div>span {
     font-size: 60px;
     margin: 28px 0;
   }
-  
+
   #section2 .sec_title p {
     font-size: 24px;
   }
@@ -674,13 +694,14 @@ footer .right div>span {
   }
 
   #section2 nav>div>h3 {
-    font-size: 36px; }
-  
+    font-size: 36px;
+  }
+
   #section2 nav>div p {
     font-size: 21px;
-   }
-   
-   #section2 nav>div>div {
+  }
+
+  #section2 nav>div>div {
     width: 174px;
     height: 35px;
     padding: 6px 10px;
@@ -692,9 +713,13 @@ footer .right div>span {
     width: 310px;
     right: 0;
   }
-  
+
   #section2 nav .box4 img {
     right: -67px;
+  }
+
+  #section3 #game_box li {
+    padding: 0 11.5px;
   }
 
   #section4 .tab ul li img {
@@ -729,28 +754,36 @@ footer .right div>span {
     margin: 0 auto;
   }
 
-  #section1 .slide #slide_img li{
+  #section1 .slide {
     width: 960px;
     height: 443px;
   }
 
-  #section1 .slide .m_slide{
-    display: none;
-  }
-
-  #section1 .slide .slide_btn {
+  #section1 .slide #slide_img li {
+    width: 960px;
     height: 443px;
   }
 
-  #section1 .notice h2{
+  #section1 .slide .m_slide {
+    display: none;
+  }
+
+  #section1 .slide_btn {
+    max-width: 960px;
+    height: 443px;
+    top: 134px;
+    z-index: 1000;
+  }
+
+  #section1 .notice h2 {
     font-size: 33px;
   }
 
-  #section1 .notice .rolling_box{
+  #section1 .notice .rolling_box {
     width: 500px;
   }
 
-  .rolling_box ul li a{
+  .rolling_box ul li a {
     font-size: 25px;
   }
 
@@ -758,7 +791,7 @@ footer .right div>span {
     font-size: 60px;
     margin: 28px 0;
   }
-  
+
   #section2 .sec_title p {
     font-size: 24px;
   }
@@ -775,14 +808,14 @@ footer .right div>span {
   }
 
   #section2 nav>div>h3 {
-    font-size: 24px; 
+    font-size: 24px;
   }
-  
+
   #section2 nav>div p {
     font-size: 16px;
-   }
-   
-   #section2 nav>div>div {
+  }
+
+  #section2 nav>div>div {
     width: 150px;
     height: 35px;
     padding: 6px 10px;
@@ -798,7 +831,7 @@ footer .right div>span {
     width: 252px;
     right: 0;
   }
-  
+
   #section2 nav .box4 img {
     width: 220px;
     right: -67px;
@@ -808,20 +841,24 @@ footer .right div>span {
     width: 100%
   }
 
+  #section3 #game_box li {
+    padding: 0 6.75px;
+  }
+
   #section4 .tab ul li img {
     width: 90px;
     margin-bottom: 15px;
   }
 
-  #section4 .tab ul li p{
+  #section4 .tab ul li p {
     font-size: 15px;
   }
 
-  #section5 .welfare_box{
+  #section5 .welfare_box {
     width: 100%
   }
 
-  footer{
+  footer {
     padding: 40px 20px;
   }
 
@@ -851,8 +888,9 @@ footer .right div>span {
     margin: 0 auto;
   }
 
-  #section1 .slide{
+  #section1 .slide {
     width: 300px;
+    height: 300px;
   }
 
   #section1 .slide #slide_img2 {
@@ -861,28 +899,31 @@ footer .right div>span {
     overflow: hidden;
     transition: 1s;
   }
-  
-  #section1 .slide #slide_img2 li{
+
+  #section1 .slide #slide_img2 li {
     width: 300px;
     height: 300px;
     border-radius: 20px;
     overflow: hidden;
   }
 
-  #section1 .slide #slide_img2 li a img{
+  #section1 .slide #slide_img2 li a img {
     width: 100%;
-  } 
+  }
 
-  #section1 .slide .w_slide{
+  #section1 .slide .w_slide {
     display: none;
   }
 
-  #section1 .slide #slide_img{
+  #section1 .slide #slide_img {
     display: none;
   }
 
-  #section1 .slide .slide_btn {
+  #section1 .slide_btn {
+    max-width: 650px;
     height: 300px;
+    top: 30px;
+    z-index: 1000;
   }
 
   #section1 .notice {
@@ -890,23 +931,23 @@ footer .right div>span {
     width: 100%;
   }
 
-  #section1 .notice h2{
+  #section1 .notice h2 {
     font-size: 35px;
   }
 
-  #section1 .notice .rolling_box{
+  #section1 .notice .rolling_box {
     width: 100%;
   }
 
-  .rolling_box ul li a{
+  .rolling_box ul li a {
     font-size: 25px;
   }
 
-  #section1 .slide .slide_btn .btn_left {
+  #section1 .slide_btn .btn_left {
     width: 50px;
   }
 
-  #section1 .slide .slide_btn .btn_right {
+  #section1 .slide_btn .btn_right {
     width: 50px;
   }
 
@@ -914,7 +955,7 @@ footer .right div>span {
     font-size: 40px;
     margin: 20px 0;
   }
-  
+
   #section2 .sec_title p {
     font-size: 19px;
   }
@@ -932,14 +973,14 @@ footer .right div>span {
   }
 
   #section2 nav>div>h3 {
-    font-size: 14px; 
+    font-size: 14px;
   }
-  
+
   #section2 nav>div p {
     font-size: 14px;
-   }
-   
-   #section2 nav>div>div {
+  }
+
+  #section2 nav>div>div {
     width: 150px;
     height: 35px;
     padding: 6px 10px;
@@ -955,7 +996,7 @@ footer .right div>span {
     width: 252px;
     right: 0;
   }
-  
+
   #section2 nav .box4 img {
     width: 220px;
     right: 0px;
@@ -979,33 +1020,34 @@ footer .right div>span {
     font-size: 12px;
   }
 
-  #section3 #tag_box>label img{
+  #section3 #tag_box>label img {
     width: 15px;
   }
 
   #section3 #game_box {
     height: 440px;
   }
-  
+
   #section3 #game_box li {
     width: 150px;
     height: 220px;
     position: relative;
+    padding: 0 15px;
   }
 
-  #section3 #game_box li img{
+  #section3 #game_box li img {
     width: 100%;
   }
-  
+
   #section3 #game_box li h4 {
     font-size: 15px;
     margin: 5px 0;
   }
 
-  #section3 #game_box li p{
+  #section3 #game_box li p {
     font-size: 11px;
   }
-  
+
   #section3 #game_box li div {
     display: flex;
     align-items: center;
@@ -1013,10 +1055,10 @@ footer .right div>span {
     bottom: 10px;
   }
 
-  #section3 #game_box li div img{
+  #section3 #game_box li div img {
     width: 15px;
   }
-  
+
   #section3 #game_box li div p {
     display: inline;
     margin-left: 5px;
@@ -1031,6 +1073,10 @@ footer .right div>span {
     margin: 40px 0;
   }
 
+  #section4 .tab p{
+    font-size: 18px;
+  }
+
   #section4 .tab ul li {
     margin: 0 10px;
   }
@@ -1040,14 +1086,14 @@ footer .right div>span {
     margin-bottom: 15px;
   }
 
-  #section4 .tab ul li p{
+  #section4 .tab ul li p {
     font-size: 15px;
   }
 
   #section4 .tab .tab_box h5 {
     font-size: 16px;
   }
-  
+
   #section4 .tab .tab_box p {
     font-size: 13px;
   }
@@ -1061,12 +1107,12 @@ footer .right div>span {
     height: 315px;
   }
 
-  #section5 .welfare_box{
+  #section5 .welfare_box {
     width: 100%
   }
 
 
-  footer{
+  footer {
     padding: 40px 20px;
   }
 
@@ -1079,7 +1125,7 @@ footer .right div>span {
     font-size: 10px;
   }
 
-  footer .right .footer_1 span{
+  footer .right .footer_1 span {
     margin: 0 2px;
   }
 
